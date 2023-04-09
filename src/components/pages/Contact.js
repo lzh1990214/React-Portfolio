@@ -18,6 +18,20 @@ export default function Contact() {
   // function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    let emailValue = `${email}`;
+    let nameValue = `${name}`;
+    let messageValue = `${message}`;
+    // check if there are values of email, name and message in the contact form
+    if (!emailValue) {
+      setEmailError(true);
+    } else if (!nameValue) {
+      setNameError(true);
+    } else if (!messageValue) {
+      setMessageError(true);
+    } else {
+      window.location.href = `mailto:seanlee900214@gmail.com?subject=New email from ${name}&body=${message}&from=${email}`;
+    }
   };
 
   const handleNameChange = (event) => {
@@ -60,7 +74,7 @@ export default function Contact() {
     // if the element name is 'email' or the input doesn't match email format, an error will show up
     else if (name === 'email' || validationResult === false) {
       setEmailError(event.target.value === '');
-      setEmailError(true);
+      // setEmailError(true);
     }
   }
 
