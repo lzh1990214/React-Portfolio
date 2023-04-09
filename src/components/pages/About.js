@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div className="container-sm d-flex flex-column align-items-center mt-5 mw-75" >
+    <div className="container-sm d-flex flex-column align-items-center mt-5" >
       <h1 className='mb-5'>About Me</h1>
       <p className='w-75'>
         Zhihao Li is a talented landscape architect with over seven years of experience designing and managing projects of various scales at AECOM in Washington D.C.. He holds a Master's degree in Landscape Architecture from Rhode Island School of Design, where he developed his skills in site analysis, artistic view, and creative problem-solving.
