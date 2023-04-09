@@ -4,8 +4,8 @@ import React from 'react';
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <div class="container-fluid d-flex align-items-baseline justify-content-between mt-3">
-      <a class="navbar-brand" href="#">ZHIHAO LI</a>
+    <div className ="container-fluid d-flex align-items-baseline justify-content-between mt-3">
+      <a className ="navbar-brand" href="#">ZHIHAO LI</a>
       <ul className="nav justify-content-end nav-pills">
         <li className="nav-item">
           <a
