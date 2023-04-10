@@ -23,8 +23,10 @@ export default function Contact() {
     let nameValue = `${name}`;
     let messageValue = `${message}`;
     // check if there are values of email, name and message in the contact form
-    if (!emailValue) {
+    if (validateEmail(emailValue) === false) {
       setEmailError(true);
+    } else if (!email) {
+      setNameError(true);
     } else if (!nameValue) {
       setNameError(true);
     } else if (!messageValue) {
@@ -63,7 +65,7 @@ export default function Contact() {
     const { name } = event.target;
     // validate input value in the email form constantly and check with regex
     let validationResult = validateEmail(event.target.value);
-    // console.log(validationResult);
+    console.log(validationResult);
 
     if (name === 'name') {
       setNameError(event.target.value === '');
@@ -72,10 +74,11 @@ export default function Contact() {
       setMessageError(event.target.value === '');
     }
     // if the element name is 'email' or the input doesn't match email format, an error will show up
-    else if (name === 'email' || validationResult === false) {
+    else if (name === 'email') {
+
       setEmailError(event.target.value === '');
-      // setEmailError(true);
     }
+
   }
 
   return (
