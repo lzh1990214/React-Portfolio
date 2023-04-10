@@ -68,16 +68,16 @@ export default function Contact() {
     console.log(validationResult);
 
     if (name === 'name') {
-      setNameError(event.target.value === '');
+      setNameError(true);
     }
     else if (name === 'message') {
-      setMessageError(event.target.value === '');
+      setMessageError(true);
     }
     // if the element name is 'email' or the input doesn't match email format, an error will show up
-    else if (name === 'email') {
-
-      setEmailError(event.target.value === '');
+    else if (name === 'email' && validationResult === false) {
+      setEmailError(true);
     }
+    //   setEmailError(event.target.value === '');
 
   }
 
@@ -134,7 +134,7 @@ export default function Contact() {
                   className={`form-control ${messageError ? 'is-invalid' : ''}`}
                   id="message"
                   placeholder="Enter your message"
-                  rows={3}
+                  rows={6}
                   value={message}
                   onChange={handleMessageChange}
                   onBlur={handleBlur}

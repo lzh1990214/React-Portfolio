@@ -13,7 +13,7 @@ export default function Resume() {
     <div className="container-sm d-flex flex-column align-items-center mt-5">
 
       <div className="row">
-        <div className="col">
+        <div className="col mb-4">
           <h1>Resume</h1>
         </div>
       </div>
@@ -28,45 +28,63 @@ export default function Resume() {
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+
+          <div class="col-lg-4">
             <div class="card">
-              <div class="card-header">
-                <h3>Front-End Proficiencies</h3>
-              </div>
-              <div class="card-body text-start">
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Bootstrap</li>
-                  <li>Bulma.io</li>
-                </ul>
+              <div className="card-body">
+                <div class="card-title mb-4">
+                  <h3>UXD Proficiencies</h3>
+                </div>
+                <div class="card-text text-start">
+                  <p>User Research</p>
+                  <p>Information Architecture</p>
+                  <p>Interaction Design</p>
+                  <p>Visual Design</p>
+                  <p>Prototyping and Testing</p>
+                  <p>Collaboration</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+
+          <div class="col-lg-4">
             <div class="card">
-              <div class="card-header">
-                <h3>Back-End Proficiencies</h3>
+              <div className="card-body">
+                <div class="card-title mb-4">
+                  <h3>Front-End Proficiencies</h3>
+                </div>
+                <div class="card-text text-start">
+                  <p>HTML</p>
+                  <p>CSS</p>
+                  <p>JavaScript</p>
+                  <p>React</p>
+                  <p>Bootstrap</p>
+                  <p>Bulma</p>
+                </div>
               </div>
-              <div class="card-body text-start">
-                <ul>
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>SQL</li>
-                  <li>MongoDB</li>
-                  <li>RESTful APIs</li>
-                  <li>MERN</li>
-                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div className="card-body">
+                <div class="card-title mb-4">
+                  <h3>Back-End Proficiencies</h3>
+                </div>
+                <div class="card-text text-start">
+                  <p>Node.js</p>
+                  <p>Express</p>
+                  <p>SQL</p>
+                  <p>MongoDB</p>
+                  <p>RESTful API</p>
+                  <p>MERN</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-
-    </div>
+      
+    </div >
   );
 }
