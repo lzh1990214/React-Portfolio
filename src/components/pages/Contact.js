@@ -77,13 +77,12 @@ export default function Contact() {
     else if (name === 'email' && validationResult === false) {
       setEmailError(true);
     }
-    //   setEmailError(event.target.value === '');
 
   }
 
   return (
     <div className="container-md d-flex flex-column align-items-center mt-5">
-      <h1>Contact</h1>
+      <h1 className='page-title'>Contact</h1>
       <div className='container w-75'>
         <div className='row'>
           <div className='col'>
@@ -148,7 +147,7 @@ export default function Contact() {
                 )}
               </div>
 
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn text-white" id="submit-btn">Submit</button>
             </form>
 
           </div>

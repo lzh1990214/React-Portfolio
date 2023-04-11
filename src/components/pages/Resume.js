@@ -14,13 +14,13 @@ export default function Resume() {
 
       <div className="row">
         <div className="col mb-4">
-          <h1>Resume</h1>
+          <h1 className='page-title'>Resume</h1>
         </div>
       </div>
 
       <div className="row mb-5">
         <div className="col">
-          <button className="btn btn-primary" onClick={downloadResume}>
+          <button className="btn text-white" id='download-btn' onClick={downloadResume}>
             Download Resume
           </button>
         </div>
@@ -29,13 +29,13 @@ export default function Resume() {
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4">
-            <div class="card">
+          <div class="col-lg-4 mb-3">
+            <div class="card" id='uxd-card'>
               <div className="card-body">
-                <div class="card-title mb-4">
+                <div class="card-title mb-4 proficiency-text">
                   <h3>UXD Proficiencies</h3>
                 </div>
-                <div class="card-text text-start">
+                <div class="card-text text-start proficiency-text">
                   <p>User Research</p>
                   <p>Information Architecture</p>
                   <p>Interaction Design</p>
@@ -47,13 +47,13 @@ export default function Resume() {
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="card">
+          <div class="col-lg-4 mb-3">
+            <div class="card" id='fe-card'>
               <div className="card-body">
-                <div class="card-title mb-4">
+                <div class="card-title mb-4 proficiency-text">
                   <h3>Front-End Proficiencies</h3>
                 </div>
-                <div class="card-text text-start">
+                <div class="card-text text-start proficiency-text">
                   <p>HTML</p>
                   <p>CSS</p>
                   <p>JavaScript</p>
@@ -65,13 +65,13 @@ export default function Resume() {
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="card">
+          <div class="col-lg-4 mb-3">
+            <div class="card" id='be-card'>
               <div className="card-body">
-                <div class="card-title mb-4">
+                <div class="card-title mb-4 proficiency-text">
                   <h3>Back-End Proficiencies</h3>
                 </div>
-                <div class="card-text text-start">
+                <div class="card-text text-start proficiency-text">
                   <p>Node.js</p>
                   <p>Express</p>
                   <p>SQL</p>
@@ -84,7 +84,7 @@ export default function Resume() {
           </div>
         </div>
       </div>
-      
+
     </div >
   );
 }

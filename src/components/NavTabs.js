@@ -1,56 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    <div className ="container-fluid d-flex align-items-baseline justify-content-between mt-3">
-      <a className ="navbar-brand" href="#">ZHIHAO LI</a>
-      <ul className="nav justify-content-end nav-pills">
-        <li className="nav-item">
-          <a
-            href="#about"
-            onClick={() => handlePageChange('About')}
-            // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-          >
-            About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#blog"
-            onClick={() => handlePageChange('Portfolio')}
-            // Check to see if the currentPage is `Portfolio`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-          >
-            Portfolio
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#contact"
-            onClick={() => handlePageChange('Contact')}
-            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-          >
-            Contact
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#resume"
-            onClick={() => handlePageChange('Resume')}
-            // This is a conditional (ternary) operator that checks to see if the current page is "Resume"
-            // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-            className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-          >
-            Resume
-          </a>
-        </li>
-      </ul>
-    </div>
+    <nav className="navbar navbar-expand-lg navbar-light ms-3 me-3">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#" id='nav-brand-text'>ZHIHAO LI</a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNavbar}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a href="#"
+                onClick={() => handlePageChange('About')}
+                // Check to see if the currentPage is `About`, and if so, the element uses the active link class from bootstrap. Otherwise, set the class to a normal nav-link
+                className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} id={currentPage === 'About' ? 'about' : 'about-fade'}>About</a>
+            </li>
+            <li className="nav-item">
+              <a href="#"
+                onClick={() => handlePageChange('Portfolio')}
+                className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'} id={currentPage === 'Portfolio' ? 'portfolio' : 'portfolio-fade'}>Portfolio</a>
+            </li>
+            <li className="nav-item">
+              <a href="#" onClick={() => handlePageChange('Contact')}
+                className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} id={currentPage === 'Contact' ? 'contact' : 'contact-fade'}>Contact</a>
+            </li>
+            <li className="nav-item">
+              <a href="#"
+                onClick={() => handlePageChange('Resume')}
+                // checks to see if the current page is "Resume".
+                // If it is, set the current page to 'nav-link-active', otherwise set it to 'nav-link'
+                className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+                id={currentPage === 'Resume' ? 'resume' : 'resume-fade'}
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
+
 }
 
 export default NavTabs;
