@@ -68,15 +68,19 @@ export default function Contact() {
     console.log(validationResult);
 
     if (name === 'name') {
-      setNameError(true);
+      setNameError(event.target.value === '');
     }
     else if (name === 'message') {
-      setMessageError(true);
+      setMessageError(event.target.value === '');
     }
     // if the element name is 'email' or the input doesn't match email format, an error will show up
     else if (name === 'email' && validationResult === false) {
       setEmailError(true);
+      // setEmailError(event.target.value === '');
     }
+    // else if (name === 'email') {
+    //   setEmailError(true);
+    // }
 
   }
 
