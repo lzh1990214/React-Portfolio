@@ -43,7 +43,7 @@ ul {
 a:link,
 a:visited {
   text-decoration: none;
-  /* color: #5c6141; */
+  color: #5c6141;
   cursor: pointer;
 }
 
