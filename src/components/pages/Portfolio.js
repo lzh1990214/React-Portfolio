@@ -5,6 +5,13 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: 'ProducePal',
+      description: 'Full-stack Application',
+      image: './asset/img/producepal-landing.jpg',
+      github: 'https://github.com/lzh1990214/Produce-Pal',
+      deploy: 'https://ppt-1.herokuapp.com/'
+    },
+    {
       title: 'GreenThumb',
       description: 'Front-end Application',
       image: './asset/img/greenthumb.png',
@@ -38,14 +45,7 @@ export default function Portfolio() {
       image: './asset/img/pokemon-quiz.png',
       github: 'https://github.com/lzh1990214/quiz',
       deploy: 'https://lzh1990214.github.io/quiz/'
-    },
-    {
-      title: 'Note Taker',
-      description: 'Full-stack Application',
-      image: './asset/img/note-taker.png',
-      github: 'https://github.com/lzh1990214/Note-Taker',
-      deploy: 'https://note-taker-zl.herokuapp.com/'
-    },
+    }
   ];
 
   const [hoveredProject, setHoveredProject] = useState(null);
